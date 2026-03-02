@@ -34,6 +34,12 @@ def get_auth0_token(domain: str, client_id: str, client_secret: str) -> str:
     except requests.exceptions.RequestException as e:
         console.print(f"[red]Error:[/red] {e}")
         sys.exit(1)
+    except Exception:
+        console.print("[red]Unexpected error occurred[/red]")
+        sys.exit(1)
+
+    # This line should never be reached due to sys.exit calls above
+    return ""
 
 
 def main():
