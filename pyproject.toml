@@ -58,6 +58,13 @@ build-backend = "hatchling.build"
 [tool.hatch.build.targets.wheel]
 packages = ["finance_agent"]
 
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unreachable = true
+ignore_missing_imports = true
+strict_optional = false
+
 [tool.ty.environment]
 python = "./.venv"
 python-version = "3.12"
