@@ -24,9 +24,11 @@
 This project builds an intelligent financial analysis agent that combines real-time market data and web search to generate structured, data-driven insights. It presents financial information in clear tables and concise summaries through an interactive playground interface, with flexible provider integration via OpenRouter.. Built on the [Bindu Agent Framework](https://github.com/getbindu/bindu) for the Internet of Agents.
 
 **Key Capabilities:**
-- 🔍 [Add your key capabilities here]
-- ✅ [Add another capability]
-- 🚨 [Add another capability]
+- � **Real-time Stock Data**: Fetch current prices, market cap, P/E ratios, and key financial metrics
+- 🔍 **Market News Integration**: Access latest financial news and analyst recommendations
+- 📈 **Technical Analysis**: Generate insights with properly formatted markdown tables
+- � **Investment Research**: Combine data analysis with recent news for comprehensive insights
+- 🎯 **Clean Output**: Structured, professional financial reports with disclaimers
 
 ---
 
@@ -93,40 +95,53 @@ gh repo create Paraschamoli/finance-agent --public --source=. --remote=origin --
 ### Example Queries
 
 ```bash
-# Example query 1
-"[Add example query here]"
+# Stock analysis
+"analyze nvidia stock"
+"what's the current price of AAPL"
+"compare tesla and ford financials"
 
-# Example query 2
-"[Add another example]"
+# Market research
+"latest news about semiconductor stocks"
+"analyst recommendations for microsoft"
+"market trends in AI sector"
+
+# Financial metrics
+"show me key ratios for amazon"
+"what's the P/E ratio of google"
+"dividend yield analysis for Johnson & Johnson"
 ```
 
 ### Input Formats
 
 **Plain Text:**
 ```
-[Describe expected input format]
+analyze nvidia stock
+what's the current price of AAPL
+latest news about semiconductor stocks
 ```
 
 **JSON:**
 ```json
 {
-  "content": "[example content]",
-  "focus": "[example focus]"
+  "query": "analyze nvidia stock",
+  "include_news": true,
+  "timeframe": "1m"
 }
 ```
 
 ### Output Structure
 
 The agent returns structured output with:
-- **[Output Component 1]**: Description
-- **[Output Component 2]**: Description
-- **[Output Component 3]**: Description
+- **Financial Tables**: Clean markdown tables with stock prices, ratios, and metrics
+- **News Summaries**: Bullet-pointed highlights of recent market news
+- **Analysis Insights**: Concise investment research with context
+- **Professional Formatting**: Proper structure with disclaimers
 
 ---
 
 ## 🔌 API Usage
 
-The agent exposes a RESTful API when running. Default endpoint: `http://localhost:3773` 
+The agent exposes a RESTful API when running. Default endpoint: `http://localhost:3773`
 
 ### Quick Start
 
@@ -145,30 +160,37 @@ For complete API documentation, request/response formats, and examples, visit:
 
 ## 🎯 Skills
 
-### finance_agent (v1.0.0)
+### finance (v1.0.0)
 
 **Primary Capability:**
-- [Describe what this skill does]
-- [Add key features]
+- AI-powered financial analysis and market research
+- Real-time stock data retrieval and analysis
+- Integration with financial news sources
 
 **Features:**
-- [Feature 1]
-- [Feature 2]
-- [Feature 3]
+- Real-time stock price and market data via YFinance
+- Latest financial news via DuckDuckGo search
+- Professional markdown table formatting
+- Comprehensive financial ratio analysis
+- Analyst recommendation summaries
 
 **Best Used For:**
-- [Use case 1]
-- [Use case 2]
-- [Use case 3]
+- Stock analysis and investment research
+- Market trend identification
+- Financial ratio comparisons
+- News-driven investment insights
+- Quick financial data lookups
 
 **Not Suitable For:**
-- [Anti-pattern 1]
-- [Anti-pattern 2]
+- Real-time trading decisions
+- Portfolio management
+- Tax or legal financial advice
+- High-frequency trading analysis
 
 **Performance:**
-- Average processing time: ~[X] seconds
-- Max concurrent requests: [N]
-- Memory per request: [X]MB
+- Average processing time: ~2-3 seconds
+- Max concurrent requests: 10
+- Memory per request: 256MB
 
 ---
 
@@ -289,9 +311,9 @@ uv run pre-commit run -a
 Contributions are welcome! Please follow these steps:
 
 1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/amazing-feature` 
-3. Commit your changes: `git commit -m 'Add amazing feature'` 
-4. Push to the branch: `git push origin feature/amazing-feature` 
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
 5. Open a Pull Request
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
@@ -341,5 +363,6 @@ uvx cookiecutter https://github.com/getbindu/create-bindu-agent.git
   <a href="https://bindus.directory">🌐 Agent Directory</a>
 </p>
 
-#   f i n a n c e - a g e n t  
+#   f i n a n c e - a g e n t 
+ 
  
