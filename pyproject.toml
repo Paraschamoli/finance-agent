@@ -45,6 +45,9 @@ dev = [
     "mkdocs-material>=8.5.10",
     "mkdocstrings[python]>=0.26.1",
     "types-requests>=2.31.0",
+    "mypy>=1.8.0",
+    "types-setuptools>=75.0.0",
+    "types-python-dateutil>=2.9.0",
 ]
 
 [build-system]
